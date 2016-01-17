@@ -1081,7 +1081,7 @@ getSymbols.fxhistoricaldata <- function
   for (i in 1:len(Symbols)) { 
     if(download) {
       # http://www.fxhistoricaldata.com/download/EURUSD?t=hour
-      url = paste('http://www.fxhistoricaldata.com/download/', Symbols[i], '?t=', type, sep='')
+      url = paste('http://www.fxhistoricaldata.com/download/', Symbols[i], '_', type, ".zip", sep='')
       filename = paste(temp.folder, '/', Symbols[i], '_', type, '.zip', sep='')     
       download.file(url, filename,  mode = 'wb')
       
